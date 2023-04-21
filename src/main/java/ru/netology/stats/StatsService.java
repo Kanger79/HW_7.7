@@ -10,14 +10,20 @@ public class StatsService {
         return (sum);
     }
 
-    public static double midleSumArray(double[] array) {
-        double sum = 0;
-        for (double i = 0; i < array.length; i++) {
-            sum = sum + array[(int) i];
-        }
+    public static double midleSumArray(int[] array) {
+        double sum = sumArray(array);
         double midleSum = sum / array.length;
         return (midleSum);
     }
+
+//    public static double midleSumArray(double[] array) {
+//        double sum = 0;
+//        for (double i = 0; i < array.length; i++) {
+//            sum = sum + array[(int) i];
+//        }
+//        double midleSum = sum / array.length;
+//        return (midleSum);
+//    }
 
     public static int maxSaleMonth(int[] array) {
         int maxMonth = 0;
@@ -37,39 +43,50 @@ public class StatsService {
                 minSale = i;
             }
         }
-        int maxMonth = minSale + 1;
-        return maxMonth;
+        return minSale + 1;
     }
 
     public static int lessMidleSumArray(int[] array) {
-        int sum = 0;
-        for (int i = 0; i < array.length; i++) {
-            sum = sum + array[i];
-        }
-        int midleSum = sum / array.length;
+        double midleSum = midleSumArray(array);
+//        int sum = 0;
+//        for (int i = 0; i < array.length; i++) {
+//            sum = sum + array[i];
+//        }
+//        int midleSum = sum / array.length;
         int lessMidleSum = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] < midleSum) {
                 lessMidleSum = lessMidleSum + 1;
             }
         }
-
         return (lessMidleSum);
     }
 
     public static int moreMidleSumArray(int[] array) {
-        int sum = 0;
-        for (int i = 0; i < array.length; i++) {
-            sum = sum + array[i];
-        }
-        int midleSum = sum / array.length;
+        //int sum = sumArray(array);
+        double midleSum = midleSumArray(array);
         int moreMidleSum = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] > midleSum) {
                 moreMidleSum = moreMidleSum + 1;
             }
         }
-        return (moreMidleSum);
+        return moreMidleSum;
     }
+
+//    public static int moreMidleSumArray(int[] array) {
+//        int sum = 0;
+//        for (int i = 0; i < array.length; i++) {
+//            sum = sum + array[i];
+//        }
+//        int midleSum = sum / array.length;
+//        int moreMidleSum = 0;
+//        for (int i = 0; i < array.length; i++) {
+//            if (array[i] > midleSum) {
+//                moreMidleSum = moreMidleSum + 1;
+//            }
+//        }
+//        return (moreMidleSum);
+//    }
 
 }

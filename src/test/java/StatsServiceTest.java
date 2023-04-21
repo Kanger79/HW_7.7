@@ -24,7 +24,7 @@ public class StatsServiceTest {
     public void shouldCalcMidleSumArray() {
         StatsService service = new StatsService();
 
-        double[] array = {2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7,};
+        int[] array = {2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7,};
 
         double expectedSum = 4.5;
         double actualSum = StatsService.midleSumArray(array);
