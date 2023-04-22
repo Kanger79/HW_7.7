@@ -2,7 +2,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.netology.stats.StatsService;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class StatsServiceTest {
@@ -43,7 +42,7 @@ public class StatsServiceTest {
         int actualSum = StatsService.maxSaleMonth(array);
 
         Assertions.assertArrayEquals(new int[]{expectedSum}, new int[]{actualSum});
-        System.out.println("Метод-3 - Номер месяца с макс. числом. Номер месяца с пиком продаж из массива " + Arrays.toString(array) + ") равен " + actualSum);
+        System.out.println("Метод-3 - Максимальное число в массиве. Номер месяца с пиком продаж из массива " + Arrays.toString(array) + ") равен " + actualSum);
     }
 
     @Test
@@ -56,7 +55,7 @@ public class StatsServiceTest {
         int actualSum = StatsService.minSaleMonth(array);
 
         Assertions.assertArrayEquals(new int[]{expectedSum}, new int[]{actualSum});
-        System.out.println("Метод-4 - Номер месяца с мин. числом. Номер месяца с минимальными продажами из массива " + Arrays.toString(array) + ") равен " + actualSum);
+        System.out.println("Метод-4 - Минимальное число в массиве. Номер месяца с минимальными продажами из массива " + Arrays.toString(array) + ") равен " + actualSum);
     }
 
     @Test
@@ -69,7 +68,7 @@ public class StatsServiceTest {
         int actualSum = StatsService.lessMidleSumArray(array);
 
         Assertions.assertArrayEquals(new int[]{expectedSum}, new int[]{actualSum});
-        System.out.println("Метод-5 - Количество месяцев с продажами ниже среднего. Количество месяцев с продажами ниже среднего из массива " + Arrays.toString(array) + ") равно " + actualSum);
+        System.out.println("Метод-5 - Количество чисел ниже среднего в массиве. Количество месяцев с продажами ниже среднего из массива " + Arrays.toString(array) + ") равно " + actualSum);
     }
 
     @Test
@@ -82,7 +81,7 @@ public class StatsServiceTest {
         int actualSum = StatsService.moreMidleSumArray(array);
 
         Assertions.assertArrayEquals(new int[]{expectedSum}, new int[]{actualSum});
-        System.out.println("Метод-6 - Количество месяцев с продажами выше среднего. Количество месяцев с продажами выше среднего из массива " + Arrays.toString(array) + ") равно " + actualSum);
+        System.out.println("Метод-6 - Количество чисел выше среднего в массиве. Количество месяцев с продажами выше среднего из массива " + Arrays.toString(array) + ") равно " + actualSum);
     }
 
 }
