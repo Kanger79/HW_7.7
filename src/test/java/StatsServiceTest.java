@@ -44,7 +44,7 @@ public class StatsServiceTest {
         int actual = StatsService.maxSaleMonth(array);
 
         Assertions.assertArrayEquals(new int[]{expected}, new int[]{actual});
-        System.out.println("Метод-3 - Максимальное число в массиве. Номер месяца с пиком продаж из массива " + Arrays.toString(array) + ") равен " + actual);
+        System.out.println("Метод-3 - Ячейка с максимальным числом в массиве. Номер месяца с пиком продаж из массива " + Arrays.toString(array) + ") равен " + actual);
     }
 
     @Test
@@ -57,7 +57,7 @@ public class StatsServiceTest {
         int actual = StatsService.minSaleMonth(array);
 
         Assertions.assertArrayEquals(new int[]{expected}, new int[]{actual});
-        System.out.println("Метод-4 - Минимальное число в массиве. Номер месяца с минимальными продажами из массива " + Arrays.toString(array) + ") равен " + actual);
+        System.out.println("Метод-4 - Ячейка с минимальным числом в массиве. Номер месяца с минимальными продажами из массива " + Arrays.toString(array) + ") равен " + actual);
     }
 
     @Test
