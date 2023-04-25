@@ -19,7 +19,7 @@ public class StatsService {
     public static int maxSaleMonth(int[] array) {
         int maxMonth = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > array[maxMonth]) {
+            if (array[i] >= array[maxMonth]) {
                 maxMonth = i;
             }
         }
@@ -29,7 +29,7 @@ public class StatsService {
     public static int minSaleMonth(int[] array) {
         int minSale = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] < array[minSale]) {
+            if (array[i] <= array[minSale]) {
                 minSale = i;
             }
         }
